@@ -61,6 +61,7 @@ app.all('*',(req,res,next) =>{
     next(new AppError(`Can't find ${req.originalUrl} on this server!`,404));
 });
 
+//global error handler
 app.use(globalErrorHandler);
 
 const port = process.env.PORT || 8000;
